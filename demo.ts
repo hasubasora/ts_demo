@@ -1,13 +1,13 @@
 //ts类型
 
 //布尔类型（boolean）
-let bool:boolean=true
+let bool: boolean = true
 
 // 数字类型(number)
 let arr: number[] = [1, 2, 3]
 let arr1: Array<number> = [1, 2, 3] //Array里面每个值都是number
 // 字符串类型(string)
-let str:string='哈哈哈'
+let str: string = '哈哈哈'
 
 //元祖类型（tuple） 给数组里面每一个定义不同类型
 let arr2: [number, string] = [123, 'this']
@@ -18,15 +18,25 @@ let arr2: [number, string] = [123, 'this']
 //     标识符[=整型常数]
 //     标识符[=整型常数]
 // }
-enum Flag {success,error,warn=5}
-let s:Flag=Flag.success
+enum Flag { success, error, warn = 5 }
+let s: Flag = Flag.success
 console.log(s); //没有赋值标示 就输出下标
 
 // 任意类型（any）
 
 // null 和 undefined
+let nulls: null
+let undefineds: undefined
+
 // void类型
-// never类型
+let voids: void
+
+// never类型 从来不会出现的值
+let nevers: never
+nevers = (() => {
+    throw new Error('error')
+})()
+
 
 
 /**
